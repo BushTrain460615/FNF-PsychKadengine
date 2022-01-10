@@ -2421,14 +2421,14 @@ class PlayState extends MusicBeatState
 		if(ratingName == 'N/A') {
 			scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: ' + ratingName;
 		} else {
-		if(ClientPrefs.simpleacc == false){
+		if(ClientPrefs.simpleacc == false && ClientPrefs.combocounter == false){
 			scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%' + ' | ' + ratingFC + ' ' + ratingName;
 		}
-		else if(ClientPrefs.simpleacc == true){
+	        if(ClientPrefs.simpleacc == true && ClientPrefs.combocounter == false){
 		scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%' +;
 		}
-		else if(ClientPrefs.simpleacc == true && ClientPrefs.combocounter == true){
-		scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%' + ' | Combo:' + combo;
+	        if(ClientPrefs.simpleacc == true && ClientPrefs.combocounter == true){
+		scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%' + ' | Combo: ' + combo;
 		}
 		else if(ClientPrefs.simpleacc == false && ClientPrefs.combocounter == true){
 		scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%' + ' | ' + ratingFC + ' ' + ratingName + ' | Combo: ' + combo;
