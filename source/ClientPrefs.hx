@@ -56,6 +56,7 @@ class ClientPrefs {
 	public static var keSustains:Bool = false; //i was bored, okay?
 	public static var noAntimash:Bool = false;
         public static var cpuStrums:Bool = true;
+	public static var simpleacc:Bool = false;
 	public static var ratingOffset:Int = 0;
 	public static var sickWindow:Int = 45;
 	public static var goodWindow:Int = 90;
@@ -197,6 +198,7 @@ class ClientPrefs {
 		FlxG.save.data.achievementsMap = Achievements.achievementsMap;
 		FlxG.save.data.henchmenDeath = Achievements.henchmenDeath;
 		FlxG.save.data.noAntimash = noAntimash;
+		FlxG.save.data.simpleacc = simpleacc;
 		FlxG.save.data.ratingOffset = ratingOffset;
 		FlxG.save.data.sickWindow = sickWindow;
 		FlxG.save.data.goodWindow = goodWindow;
@@ -260,6 +262,11 @@ class ClientPrefs {
 		if(FlxG.save.data.camZooms != null) {
 			camZooms = FlxG.save.data.camZooms;
 		}
+		
+		if(FlxG.save.data.simpleacc != null){
+			simpleacc = FlxG.save.data.simpleacc;
+		}
+		
 		if(FlxG.save.data.hideHud != null) {
 			hideHud = FlxG.save.data.hideHud;
 		}
