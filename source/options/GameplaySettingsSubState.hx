@@ -41,6 +41,13 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			'bool', //Variable type
 			false); //Default value
 		addOption(option);
+		
+		var option:Option = new Option('CPU Strums Stay Static',
+			'If unchecked, your opponents notes will glow.',
+		        'cpuStrums',
+			'bool',
+			true);
+		addOption(option);
 
 		var option:Option = new Option('Middlescroll',
 			'If checked, your notes get centered.',
