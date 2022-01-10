@@ -57,6 +57,7 @@ class ClientPrefs {
 	public static var noAntimash:Bool = false;
         public static var cpuStrums:Bool = true;
 	public static var simpleacc:Bool = false;
+	public static var combocounter:Bool = false;
 	public static var ratingOffset:Int = 0;
 	public static var sickWindow:Int = 45;
 	public static var goodWindow:Int = 90;
@@ -177,6 +178,7 @@ class ClientPrefs {
 		FlxG.save.data.middleScroll = middleScroll;
 		FlxG.save.data.showFPS = showFPS;
 		FlxG.save.data.cpuStrums = cpuStrums;
+		FlxG.save.data.combocounter = combocounter;
 		FlxG.save.data.flashing = flashing;
 		FlxG.save.data.globalAntialiasing = globalAntialiasing;
 		FlxG.save.data.noteSplashes = noteSplashes;
@@ -265,6 +267,11 @@ class ClientPrefs {
 		
 		if(FlxG.save.data.simpleacc != null){
 			simpleacc = FlxG.save.data.simpleacc;
+		}
+		
+		
+		if(FlxG.save.data.combocounter != null){
+			combocounter = FlxG.save.data.combocounter;
 		}
 		
 		if(FlxG.save.data.hideHud != null) {
