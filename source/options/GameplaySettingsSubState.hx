@@ -31,8 +31,8 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 {
 	public function new()
 	{
-		title = 'Gameplay Settings';
-		rpcTitle = 'Gameplay Settings Menu'; //for Discord Rich Presence
+		title = 'Gameplay';
+		rpcTitle = 'Gameplay'; //for Discord Rich Presence
 
 		//I'd suggest using "Downscroll" as an example for making your own option since it is the simplest here
 		var option:Option = new Option('Downscroll', //Name
@@ -75,9 +75,9 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			"The input system you wish to use.",
 			'inputSystem',
 			'string',
-			"Native",
+			"Kade Engine",
 			["Native", "Kade Engine", "ZoroForce EK"]);
-		addOption(option);
+		// addOption(option);
 
 		var option:Option = new Option('Disable Reset Button',
 			"If checked, pressing Reset won't do anything.",
