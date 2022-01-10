@@ -48,6 +48,13 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			'bool',
 			true);
 		addOption(option);
+		
+		var option:Option = new Option('Combo Counter',
+			'If unchecked, your opponents notes will glow.',
+		        'combocounter',
+			'bool',
+			false);
+		addOption(option);
 
 		var option:Option = new Option('Middlescroll',
 			'If checked, your notes get centered.',
