@@ -91,19 +91,6 @@ class PlayState extends MusicBeatState
 		['AAAA:', 1],
 		['AAAAA', 1]
 	];
-	
-		public static var ratingStuffE:Array<Dynamic> = [
-		['Shit', 0.2], //From 0% to 19%
-		['Really bad', 0.4], //From 20% to 39%
-		['So Bad', 0.5], //From 40% to 49%
-		['Bad', 0.6], //From 50% to 59%
-		['Meh', 0.69], //From 60% to 68%
-		['Meh', 0.7], //69%
-		['Good', 0.8], //From 70% to 79%
-		['So good', 0.9], //From 80% to 89%
-		['Really good', 1], //From 90% to 99%
-		['Sick!', 1]
-	];
 	public var modchartTweens:Map<String, FlxTween> = new Map<String, FlxTween>();
 	public var modchartSprites:Map<String, ModchartSprite> = new Map<String, ModchartSprite>();
 	public var modchartTimers:Map<String, FlxTimer> = new Map<String, FlxTimer>();
@@ -2437,8 +2424,14 @@ class PlayState extends MusicBeatState
 		if(ClientPrefs.simpleacc == false){
 			scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%' + ' | ' + ratingFC + ' ' + ratingName;
 		}
-		else{
-		scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%' + ' | ' + ratingNama;
+		else if(ClientPrefs.simpleacc == true){
+		scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%' +;
+		}
+		else if(ClientPrefs.simpleacc == true && ClientPrefs.combocounter == true){
+		scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%' + ' | Combo:' + combo;
+		}
+		else if(ClientPrefs.simpleacc == false && ClientPrefs.combocounter == true){
+		scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%' + ' | ' + ratingFC + ' ' + ratingName + ' | Combo: ' + combo;
 		}
 		}
 
@@ -4710,7 +4703,6 @@ class PlayState extends MusicBeatState
 		}
 	}
        
-        public var ratingNama:String = "N/A"; //joe mama
 	public var ratingName:String = 'N/A'; //uuu what is this
 	public var ratingPercent:Float;
 	public var ratingFC:String;
@@ -4734,7 +4726,6 @@ class PlayState extends MusicBeatState
 				if(ratingPercent >= 1)
 				{
 					ratingName = ratingStuff[ratingStuff.length-1][0]; //Uses last string
-					ratingNama = ratingStuffE[ratingStuffE.length-1][0];
 				}
 				else
 				{
