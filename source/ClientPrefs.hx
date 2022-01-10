@@ -50,10 +50,12 @@ class ClientPrefs {
 		'opponentplay' => false
 	];
 	public static var inputSystem:String = 'Kade Engine'; //Kade engine da best
-
+	
+        
 	public static var comboOffset:Array<Int> = [0, 0, 0, 0];
 	public static var keSustains:Bool = false; //i was bored, okay?
 	public static var noAntimash:Bool = false;
+        public static var cpuStrums:Bool = true;
 	public static var ratingOffset:Int = 0;
 	public static var sickWindow:Int = 45;
 	public static var goodWindow:Int = 90;
@@ -173,6 +175,7 @@ class ClientPrefs {
 		FlxG.save.data.downScroll = downScroll;
 		FlxG.save.data.middleScroll = middleScroll;
 		FlxG.save.data.showFPS = showFPS;
+		FlxG.save.data.cpuStrums = cpuStrums;
 		FlxG.save.data.flashing = flashing;
 		FlxG.save.data.globalAntialiasing = globalAntialiasing;
 		FlxG.save.data.noteSplashes = noteSplashes;
@@ -286,6 +289,10 @@ class ClientPrefs {
 		}
 		if(FlxG.save.data.comboOffset != null) {
 			comboOffset = FlxG.save.data.comboOffset;
+		}
+		
+		if(FlxG.save.data.cpuStrums != null) {
+			cpuStrums = FlxG.save.data.cpuStrums;
 		}
 		
 		if(FlxG.save.data.ratingOffset != null) {
