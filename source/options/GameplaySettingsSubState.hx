@@ -55,9 +55,17 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			'bool',
 			true);
 		addOption(option); //shut up cpu strums should stay static
+
+	        var option:Option = new Option('Simple Ratings',
+			'If checked, there will be no FC or letter ratings.',
+		        'simpleacc',
+			'bool',
+			false);
+		addOption(option);
+
 		
 		var option:Option = new Option('Combo Counter',
-			'If unchecked, your opponents notes will glow.',
+			'If checked, your combo will appear on the ratings.',
 		        'combocounter',
 			'bool',
 			false);
