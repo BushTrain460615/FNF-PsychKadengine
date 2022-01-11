@@ -41,8 +41,8 @@ class VisualsUISubState extends BaseOptionsMenu
 			false);
 		// addOption(option)
 
-                var option:Option = new Option('Watermark',
-                        'If unchecked, watermarks in songs will dissappear.',
+                var option:Option = new Option('No Watermark',
+                        'If checked, watermarks in songs will dissappear.', //why did you put watermarks in the first place you dumb idiot
                         'noWatermark',
                         'bool',
                         false);
