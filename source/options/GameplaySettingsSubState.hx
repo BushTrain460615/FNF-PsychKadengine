@@ -41,24 +41,24 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			'bool', //Variable type
 			false); //Default value
 		addOption(option);
+
+               var option:Option = new Option('Middlescroll',
+			'If checked, your notes get centered.',
+			'middleScroll',
+			'bool',
+			false);
+		addOption(option); 
 		
 		var option:Option = new Option('CPU Strums Stay Static',
 			'If unchecked, your opponents notes will glow.',
 		        'cpuStrums',
 			'bool',
 			true);
-		addOption(option);
+		addOption(option); //shut up cpu strums should stay static
 		
 		var option:Option = new Option('Combo Counter',
 			'If unchecked, your opponents notes will glow.',
 		        'combocounter',
-			'bool',
-			false);
-		addOption(option);
-
-		var option:Option = new Option('Middlescroll',
-			'If checked, your notes get centered.',
-			'middleScroll',
 			'bool',
 			false);
 		addOption(option);
@@ -83,7 +83,7 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			'inputSystem',
 			'string',
 			"Kade Engine",
-			["Native", "Kade Engine", "ZoroForce EK"]);
+			["Native", "Kade Engine"]);
 		// addOption(option);
 
 		var option:Option = new Option('Disable Reset Button',
@@ -93,16 +93,7 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			false);
 		addOption(option);
 
-		/*var option:Option = new Option('Note Delay',
-			'Changes how late a note is spawned.\nUseful for preventing audio lag from wireless earphones.',
-			'noteOffset',
-			'int',
-			0);
-		option.displayFormat = '%vms';
-		option.scrollSpeed = 100;
-		option.minValue = 0;
-		option.maxValue = 500;
-		addOption(option);*/
+		
 
 		var option:Option = new Option('Rating Offset',
 			'Changes how late/early you have to hit for a "Sick!"\nHigher values mean you have to hit later.',
@@ -113,7 +104,7 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 		option.scrollSpeed = 20;
 		option.minValue = -30;
 		option.maxValue = 30;
-		addOption(option);
+		
 
 		var option:Option = new Option('Sick! Hit Window',
 			'Changes the amount of time you have\nfor hitting a "Sick!" in milliseconds.',
@@ -124,7 +115,7 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 		option.scrollSpeed = 15;
 		option.minValue = 15;
 		option.maxValue = 45;
-		addOption(option);
+	
 
 		var option:Option = new Option('Good Hit Window',
 			'Changes the amount of time you have\nfor hitting a "Good" in milliseconds.',
@@ -135,7 +126,7 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 		option.scrollSpeed = 30;
 		option.minValue = 15;
 		option.maxValue = 90;
-		addOption(option);
+		
 
 		var option:Option = new Option('Bad Hit Window',
 			'Changes the amount of time you have\nfor hitting a "Bad" in milliseconds.',
@@ -146,7 +137,7 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 		option.scrollSpeed = 60;
 		option.minValue = 15;
 		option.maxValue = 135;
-		addOption(option);
+		
 
 		var option:Option = new Option('Safe Frames',
 			'Changes how many frames you have for\nhitting a note earlier or late.',
@@ -157,7 +148,7 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 		option.minValue = 2;
 		option.maxValue = 10;
 		option.changeValue = 0.1;
-		addOption(option);
+		
 
 		super();
 	}
