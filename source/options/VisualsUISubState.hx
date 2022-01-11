@@ -41,6 +41,13 @@ class VisualsUISubState extends BaseOptionsMenu
 			false);
 		// addOption(option);
 
+                var option:Option = new Option('Watermark',
+                        'If unchecked, watermarks in songs will dissappear.',
+                        'noWatermark',
+                        'bool',
+                        false);
+                addOption(option)
+
 		var option:Option = new Option('Hide HUD',
 			'If checked, hides most HUD elements.',
 			'hideHud',
