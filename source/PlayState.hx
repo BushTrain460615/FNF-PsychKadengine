@@ -1030,6 +1030,7 @@ class PlayState extends MusicBeatState
 		reloadHealthBarColors();
 	          
 	          //song watermark
+                 if(ClientPrefs.noWatermark==false){
 	          kadeEngineWatermark = new FlxText(4, healthBarBG.y
 			+ 50, 0,
 	                songName
@@ -1041,6 +1042,9 @@ class PlayState extends MusicBeatState
 		// kadeEngineWatermark.borderSize = 1.25;
 		kadeEngineWatermark.visible = !ClientPrefs.hideHud;
 		add(kadeEngineWatermark);
+                }
+                else{
+                }
 
 		scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
 		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
