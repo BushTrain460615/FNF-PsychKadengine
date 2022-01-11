@@ -58,6 +58,7 @@ class ClientPrefs {
         public static var cpuStrums:Bool = true;
 	public static var simpleacc:Bool = false;
 	public static var combocounter:Bool = false;
+        public static var noWatermark:Bool = false;
 	public static var ratingOffset:Int = 0;
 	public static var sickWindow:Int = 45;
 	public static var goodWindow:Int = 90;
@@ -195,6 +196,7 @@ class ClientPrefs {
 		FlxG.save.data.timeBarType = timeBarType;
 		FlxG.save.data.scoreZoom = scoreZoom;
 		FlxG.save.data.noReset = noReset;
+                FlxG.save.data.noWatermark = noWatermark;
 		FlxG.save.data.healthBarAlpha = healthBarAlpha;
 		FlxG.save.data.comboOffset = comboOffset;
 		FlxG.save.data.achievementsMap = Achievements.achievementsMap;
@@ -236,6 +238,11 @@ class ClientPrefs {
 		if(FlxG.save.data.flashing != null) {
 			flashing = FlxG.save.data.flashing;
 		}
+
+                if(FlxG.save.data.noWatermark != null) {
+			noWatermark = FlxG.save.data.noWatermark;
+		}
+
 		if(FlxG.save.data.globalAntialiasing != null) {
 			globalAntialiasing = FlxG.save.data.globalAntialiasing;
 		}
