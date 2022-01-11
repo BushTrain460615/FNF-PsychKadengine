@@ -2423,7 +2423,12 @@ class PlayState extends MusicBeatState
 		super.update(elapsed);
 
 		if(ratingName == 'N/A') {
+				if(ClientPrefs.combocounter == false){
 			scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: ' + ratingName;
+			}
+		else{
+		scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: ' + ratingName + ' | Combo: N/A';
+		}
 		} else {
 		if(ClientPrefs.simpleacc == false && ClientPrefs.combocounter == false){
 			scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songMisses + ' | Accuracy: ' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%' + ' | ' + ratingFC + ' ' + ratingName;
@@ -4309,7 +4314,7 @@ class PlayState extends MusicBeatState
 		if(ClientPrefs.noteSplashes && note != null) {
 			var strum:StrumNote = playerStrums.members[note.noteData];
 			if(strum != null) {
-				spawnNoteSplash(strum.x, strum.y, note.noteData, note);
+				// spawnNoteSplash(strum.x, strum.y, note.noteData, note);
 			}
 		}
 	}
