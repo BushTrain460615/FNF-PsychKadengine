@@ -29,6 +29,9 @@ MSVC v142 - VS 2019 C++ x64/x86 build tools
 Windows SDK (10.0.17763.0)
 ```
 
+ATTENTION: 
+If you want to add icons, [read](https://github.com/TahirArch/FNF-PsychKadengine/wiki/How-to-add-icons%3F) here.
+
 ## This Combination:
 * tahirk786 - Kinda coding
 * tposejank - this chad made extra keys
